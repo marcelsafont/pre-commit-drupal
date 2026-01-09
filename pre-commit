@@ -7,7 +7,7 @@ PATTERNS="console\.log\(|dd\(|dpm\("
 if git diff --cached | grep -E -n "$PATTERNS"; then
   echo ""
   echo "❌ Commit blocked: debug statements found in staged changes."
-  echo "   Please remove console.log / odd / dpm calls before committing."
+  echo "   Please remove console.log / dd / dpm calls before committing."
   echo ""
   exit 1
 fi
